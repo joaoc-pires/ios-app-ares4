@@ -6,6 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		CF47A4A12D3F857800CF3EC5 /* AresApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A49C2D3F857800CF3EC5 /* AresApp.swift */; };
+		CF47A4A22D3F857800CF3EC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A49E2D3F857800CF3EC5 /* ContentView.swift */; };
+		CF47A4A32D3F857800CF3EC5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A49F2D3F857800CF3EC5 /* Item.swift */; };
+		CF47A4A42D3F857800CF3EC5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF47A4992D3F857800CF3EC5 /* Preview Assets.xcassets */; };
+		CF47A4A52D3F857800CF3EC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF47A49D2D3F857800CF3EC5 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		CFF98B6E2D29732E00E98BB9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,17 +32,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF47A4992D3F857800CF3EC5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CF47A49B2D3F857800CF3EC5 /* Ares.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Ares.entitlements; sourceTree = "<group>"; };
+		CF47A49C2D3F857800CF3EC5 /* AresApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AresApp.swift; sourceTree = "<group>"; };
+		CF47A49D2D3F857800CF3EC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF47A49E2D3F857800CF3EC5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CF47A49F2D3F857800CF3EC5 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		CFF98B5A2D29732B00E98BB9 /* Ares.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ares.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF98B6D2D29732E00E98BB9 /* AresTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AresTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF98B772D29732E00E98BB9 /* AresUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AresUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		CFF98B5C2D29732B00E98BB9 /* Ares */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Ares;
-			sourceTree = "<group>";
-		};
 		CFF98B702D29732E00E98BB9 /* AresTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = AresTests;
@@ -72,10 +81,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF47A49A2D3F857800CF3EC5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CF47A4992D3F857800CF3EC5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CF47A4A02D3F857800CF3EC5 /* Ares */ = {
+			isa = PBXGroup;
+			children = (
+				CF47A49B2D3F857800CF3EC5 /* Ares.entitlements */,
+				CF47A49C2D3F857800CF3EC5 /* AresApp.swift */,
+				CF47A49E2D3F857800CF3EC5 /* ContentView.swift */,
+				CF47A49F2D3F857800CF3EC5 /* Item.swift */,
+				CF47A49D2D3F857800CF3EC5 /* Assets.xcassets */,
+				CF47A49A2D3F857800CF3EC5 /* Preview Content */,
+			);
+			path = Ares;
+			sourceTree = "<group>";
+		};
 		CFF98B512D29732B00E98BB9 = {
 			isa = PBXGroup;
 			children = (
-				CFF98B5C2D29732B00E98BB9 /* Ares */,
+				CF47A4A02D3F857800CF3EC5 /* Ares */,
 				CFF98B702D29732E00E98BB9 /* AresTests */,
 				CFF98B7A2D29732E00E98BB9 /* AresUITests */,
 				CFF98B5B2D29732B00E98BB9 /* Products */,
@@ -106,9 +136,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				CFF98B5C2D29732B00E98BB9 /* Ares */,
 			);
 			name = Ares;
 			packageProductDependencies = (
@@ -195,6 +222,12 @@
 			);
 			mainGroup = CFF98B512D29732B00E98BB9;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				CF47A4A62D3F948300CF3EC5 /* XCRemoteSwiftPackageReference "lib-ares-core" */,
+				CF47A4A82D3F969200CF3EC5 /* XCRemoteSwiftPackageReference "lib-swift-opml" */,
+				CF47A4A92D3F96B100CF3EC5 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				CF47A4AA2D3F96CB00CF3EC5 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CFF98B5B2D29732B00E98BB9 /* Products */;
 			projectDirPath = "";
@@ -212,6 +245,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF47A4A42D3F857800CF3EC5 /* Preview Assets.xcassets in Resources */,
+				CF47A4A52D3F857800CF3EC5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +271,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF47A4A12D3F857800CF3EC5 /* AresApp.swift in Sources */,
+				CF47A4A22D3F857800CF3EC5 /* ContentView.swift in Sources */,
+				CF47A4A32D3F857800CF3EC5 /* Item.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,6 +629,41 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CF47A4A62D3F948300CF3EC5 /* XCRemoteSwiftPackageReference "lib-ares-core" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/joaoc-pires/lib-ares-core";
+			requirement = {
+				kind = exactVersion;
+				version = 1.2.0;
+			};
+		};
+		CF47A4A82D3F969200CF3EC5 /* XCRemoteSwiftPackageReference "lib-swift-opml" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/joaoc-pires/lib-swift-opml";
+			requirement = {
+				kind = exactVersion;
+				version = 1.0.1;
+			};
+		};
+		CF47A4A92D3F96B100CF3EC5 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = exactVersion;
+				version = 3.1.3;
+			};
+		};
+		CF47A4AA2D3F96CB00CF3EC5 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyBeaver/SwiftyBeaver";
+			requirement = {
+				kind = exactVersion;
+				version = 2.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = CFF98B522D29732B00E98BB9 /* Project object */;
 }
