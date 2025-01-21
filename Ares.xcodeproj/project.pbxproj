@@ -30,6 +30,7 @@
 		CF47A4D52D3FC0F600CF3EC5 /* ThemeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A4D42D3FC0F600CF3EC5 /* ThemeType.swift */; };
 		CF47A4D72D3FC10500CF3EC5 /* AppIconType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A4D62D3FC10500CF3EC5 /* AppIconType.swift */; };
 		CF47A4D92D3FC17100CF3EC5 /* Color+Ares.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A4D82D3FC16D00CF3EC5 /* Color+Ares.swift */; };
+		CF47A4DC2D3FC3E600CF3EC5 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A4DB2D3FC3E600CF3EC5 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		CF47A4D42D3FC0F600CF3EC5 /* ThemeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeType.swift; sourceTree = "<group>"; };
 		CF47A4D62D3FC10500CF3EC5 /* AppIconType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconType.swift; sourceTree = "<group>"; };
 		CF47A4D82D3FC16D00CF3EC5 /* Color+Ares.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ares.swift"; sourceTree = "<group>"; };
+		CF47A4DB2D3FC3E600CF3EC5 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		CFF98B5A2D29732B00E98BB9 /* Ares.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ares.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF98B6D2D29732E00E98BB9 /* AresTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AresTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF98B772D29732E00E98BB9 /* AresUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AresUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,12 +117,13 @@
 		CF47A4A02D3F857800CF3EC5 /* Ares */ = {
 			isa = PBXGroup;
 			children = (
-				CF47A4DA2D3FC17A00CF3EC5 /* Extensions */,
+				CF47A4DB2D3FC3E600CF3EC5 /* DataManager.swift */,
 				CF47A49B2D3F857800CF3EC5 /* Ares.entitlements */,
 				CF47A49C2D3F857800CF3EC5 /* AresApp.swift */,
 				CF47A49E2D3F857800CF3EC5 /* ContentView.swift */,
-				CF47A4AD2D3F9C5400CF3EC5 /* Data Models */,
 				CF47A49D2D3F857800CF3EC5 /* Assets.xcassets */,
+				CF47A4AD2D3F9C5400CF3EC5 /* Data Models */,
+				CF47A4DA2D3FC17A00CF3EC5 /* Extensions */,
 				CF47A49A2D3F857800CF3EC5 /* Preview Content */,
 			);
 			path = Ares;
@@ -361,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF47A4B02D3F9C9200CF3EC5 /* Entry.swift in Sources */,
+				CF47A4DC2D3FC3E600CF3EC5 /* DataManager.swift in Sources */,
 				CF47A4CD2D3FA17700CF3EC5 /* Feed.swift in Sources */,
 				CF47A4A12D3F857800CF3EC5 /* AresApp.swift in Sources */,
 				CF47A4C72D3F9E4000CF3EC5 /* AresEntry.swift in Sources */,

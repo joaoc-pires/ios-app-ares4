@@ -8,8 +8,10 @@
 import Foundation
 import SwiftData
 
+@Model
 class Folder {
     @Attribute(.unique) var name: String
+    var feeds: [Feed]
     
     init(name: String, feeds: [Feed] = []) {
         self.name = name
