@@ -9,9 +9,27 @@
 /* Begin PBXBuildFile section */
 		CF47A4A12D3F857800CF3EC5 /* AresApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A49C2D3F857800CF3EC5 /* AresApp.swift */; };
 		CF47A4A22D3F857800CF3EC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A49E2D3F857800CF3EC5 /* ContentView.swift */; };
-		CF47A4A32D3F857800CF3EC5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A49F2D3F857800CF3EC5 /* Item.swift */; };
 		CF47A4A42D3F857800CF3EC5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF47A4992D3F857800CF3EC5 /* Preview Assets.xcassets */; };
 		CF47A4A52D3F857800CF3EC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF47A49D2D3F857800CF3EC5 /* Assets.xcassets */; };
+		CF47A4B02D3F9C9200CF3EC5 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A4AF2D3F9C8F00CF3EC5 /* Entry.swift */; };
+		CF47A4B32D3F9CE600CF3EC5 /* AresCore in Frameworks */ = {isa = PBXBuildFile; productRef = CF47A4B22D3F9CE600CF3EC5 /* AresCore */; };
+		CF47A4B52D3F9CE600CF3EC5 /* OPML in Frameworks */ = {isa = PBXBuildFile; productRef = CF47A4B42D3F9CE600CF3EC5 /* OPML */; };
+		CF47A4B72D3F9CE600CF3EC5 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = CF47A4B62D3F9CE600CF3EC5 /* SDWebImageSwiftUI */; };
+		CF47A4B92D3F9CE600CF3EC5 /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = CF47A4B82D3F9CE600CF3EC5 /* SwiftyBeaver */; };
+		CF47A4BC2D3F9D0900CF3EC5 /* AresTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A4BA2D3F9D0900CF3EC5 /* AresTests.swift */; };
+		CF47A4C02D3F9D0C00CF3EC5 /* AresUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A4BD2D3F9D0C00CF3EC5 /* AresUITests.swift */; };
+		CF47A4C12D3F9D0C00CF3EC5 /* AresUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A4BE2D3F9D0C00CF3EC5 /* AresUITestsLaunchTests.swift */; };
+		CF47A4C32D3F9DD300CF3EC5 /* String+Ares.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A4C22D3F9DCC00CF3EC5 /* String+Ares.swift */; };
+		CF47A4C72D3F9E4000CF3EC5 /* AresEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A4C62D3F9E3D00CF3EC5 /* AresEntry.swift */; };
+		CF47A4C92D3F9E5600CF3EC5 /* VideoEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A4C82D3F9E5600CF3EC5 /* VideoEntry.swift */; };
+		CF47A4CB2D3F9FDA00CF3EC5 /* UnownedEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A4CA2D3F9FCE00CF3EC5 /* UnownedEntry.swift */; };
+		CF47A4CD2D3FA17700CF3EC5 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A4CC2D3FA17300CF3EC5 /* Feed.swift */; };
+		CF47A4CF2D3FA28F00CF3EC5 /* UnownedFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A4CE2D3FA28900CF3EC5 /* UnownedFeed.swift */; };
+		CF47A4D12D3FA2E600CF3EC5 /* AresFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A4D02D3FA2E600CF3EC5 /* AresFeed.swift */; };
+		CF47A4D32D3FA30000CF3EC5 /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A4D22D3FA2FF00CF3EC5 /* Folder.swift */; };
+		CF47A4D52D3FC0F600CF3EC5 /* ThemeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A4D42D3FC0F600CF3EC5 /* ThemeType.swift */; };
+		CF47A4D72D3FC10500CF3EC5 /* AppIconType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A4D62D3FC10500CF3EC5 /* AppIconType.swift */; };
+		CF47A4D92D3FC17100CF3EC5 /* Color+Ares.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A4D82D3FC16D00CF3EC5 /* Color+Ares.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,30 +55,35 @@
 		CF47A49C2D3F857800CF3EC5 /* AresApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AresApp.swift; sourceTree = "<group>"; };
 		CF47A49D2D3F857800CF3EC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF47A49E2D3F857800CF3EC5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		CF47A49F2D3F857800CF3EC5 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		CF47A4AF2D3F9C8F00CF3EC5 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		CF47A4BA2D3F9D0900CF3EC5 /* AresTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AresTests.swift; sourceTree = "<group>"; };
+		CF47A4BD2D3F9D0C00CF3EC5 /* AresUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AresUITests.swift; sourceTree = "<group>"; };
+		CF47A4BE2D3F9D0C00CF3EC5 /* AresUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AresUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CF47A4C22D3F9DCC00CF3EC5 /* String+Ares.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ares.swift"; sourceTree = "<group>"; };
+		CF47A4C62D3F9E3D00CF3EC5 /* AresEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AresEntry.swift; sourceTree = "<group>"; };
+		CF47A4C82D3F9E5600CF3EC5 /* VideoEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoEntry.swift; sourceTree = "<group>"; };
+		CF47A4CA2D3F9FCE00CF3EC5 /* UnownedEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnownedEntry.swift; sourceTree = "<group>"; };
+		CF47A4CC2D3FA17300CF3EC5 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		CF47A4CE2D3FA28900CF3EC5 /* UnownedFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnownedFeed.swift; sourceTree = "<group>"; };
+		CF47A4D02D3FA2E600CF3EC5 /* AresFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AresFeed.swift; sourceTree = "<group>"; };
+		CF47A4D22D3FA2FF00CF3EC5 /* Folder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
+		CF47A4D42D3FC0F600CF3EC5 /* ThemeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeType.swift; sourceTree = "<group>"; };
+		CF47A4D62D3FC10500CF3EC5 /* AppIconType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconType.swift; sourceTree = "<group>"; };
+		CF47A4D82D3FC16D00CF3EC5 /* Color+Ares.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ares.swift"; sourceTree = "<group>"; };
 		CFF98B5A2D29732B00E98BB9 /* Ares.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ares.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF98B6D2D29732E00E98BB9 /* AresTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AresTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF98B772D29732E00E98BB9 /* AresUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AresUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		CFF98B702D29732E00E98BB9 /* AresTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = AresTests;
-			sourceTree = "<group>";
-		};
-		CFF98B7A2D29732E00E98BB9 /* AresUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = AresUITests;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CFF98B572D29732B00E98BB9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF47A4B72D3F9CE600CF3EC5 /* SDWebImageSwiftUI in Frameworks */,
+				CF47A4B52D3F9CE600CF3EC5 /* OPML in Frameworks */,
+				CF47A4B32D3F9CE600CF3EC5 /* AresCore in Frameworks */,
+				CF47A4B92D3F9CE600CF3EC5 /* SwiftyBeaver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,22 +115,90 @@
 		CF47A4A02D3F857800CF3EC5 /* Ares */ = {
 			isa = PBXGroup;
 			children = (
+				CF47A4DA2D3FC17A00CF3EC5 /* Extensions */,
 				CF47A49B2D3F857800CF3EC5 /* Ares.entitlements */,
 				CF47A49C2D3F857800CF3EC5 /* AresApp.swift */,
 				CF47A49E2D3F857800CF3EC5 /* ContentView.swift */,
-				CF47A49F2D3F857800CF3EC5 /* Item.swift */,
+				CF47A4AD2D3F9C5400CF3EC5 /* Data Models */,
 				CF47A49D2D3F857800CF3EC5 /* Assets.xcassets */,
 				CF47A49A2D3F857800CF3EC5 /* Preview Content */,
 			);
 			path = Ares;
 			sourceTree = "<group>";
 		};
+		CF47A4AD2D3F9C5400CF3EC5 /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				CF47A4D62D3FC10500CF3EC5 /* AppIconType.swift */,
+				CF47A4D42D3FC0F600CF3EC5 /* ThemeType.swift */,
+				CF47A4CE2D3FA28900CF3EC5 /* UnownedFeed.swift */,
+				CF47A4CA2D3F9FCE00CF3EC5 /* UnownedEntry.swift */,
+				CF47A4C42D3F9E2600CF3EC5 /* Database Models */,
+				CF47A4C52D3F9E3100CF3EC5 /* Protocol Models */,
+			);
+			path = "Data Models";
+			sourceTree = "<group>";
+		};
+		CF47A4B12D3F9CE600CF3EC5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF47A4BB2D3F9D0900CF3EC5 /* AresTests */ = {
+			isa = PBXGroup;
+			children = (
+				CF47A4BA2D3F9D0900CF3EC5 /* AresTests.swift */,
+			);
+			path = AresTests;
+			sourceTree = "<group>";
+		};
+		CF47A4BF2D3F9D0C00CF3EC5 /* AresUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CF47A4BD2D3F9D0C00CF3EC5 /* AresUITests.swift */,
+				CF47A4BE2D3F9D0C00CF3EC5 /* AresUITestsLaunchTests.swift */,
+			);
+			path = AresUITests;
+			sourceTree = "<group>";
+		};
+		CF47A4C42D3F9E2600CF3EC5 /* Database Models */ = {
+			isa = PBXGroup;
+			children = (
+				CF47A4D22D3FA2FF00CF3EC5 /* Folder.swift */,
+				CF47A4CC2D3FA17300CF3EC5 /* Feed.swift */,
+				CF47A4AF2D3F9C8F00CF3EC5 /* Entry.swift */,
+			);
+			path = "Database Models";
+			sourceTree = "<group>";
+		};
+		CF47A4C52D3F9E3100CF3EC5 /* Protocol Models */ = {
+			isa = PBXGroup;
+			children = (
+				CF47A4D02D3FA2E600CF3EC5 /* AresFeed.swift */,
+				CF47A4C82D3F9E5600CF3EC5 /* VideoEntry.swift */,
+				CF47A4C62D3F9E3D00CF3EC5 /* AresEntry.swift */,
+			);
+			path = "Protocol Models";
+			sourceTree = "<group>";
+		};
+		CF47A4DA2D3FC17A00CF3EC5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CF47A4D82D3FC16D00CF3EC5 /* Color+Ares.swift */,
+				CF47A4C22D3F9DCC00CF3EC5 /* String+Ares.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		CFF98B512D29732B00E98BB9 = {
 			isa = PBXGroup;
 			children = (
 				CF47A4A02D3F857800CF3EC5 /* Ares */,
-				CFF98B702D29732E00E98BB9 /* AresTests */,
-				CFF98B7A2D29732E00E98BB9 /* AresUITests */,
+				CF47A4BB2D3F9D0900CF3EC5 /* AresTests */,
+				CF47A4BF2D3F9D0C00CF3EC5 /* AresUITests */,
+				CF47A4B12D3F9CE600CF3EC5 /* Frameworks */,
 				CFF98B5B2D29732B00E98BB9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -139,6 +230,10 @@
 			);
 			name = Ares;
 			packageProductDependencies = (
+				CF47A4B22D3F9CE600CF3EC5 /* AresCore */,
+				CF47A4B42D3F9CE600CF3EC5 /* OPML */,
+				CF47A4B62D3F9CE600CF3EC5 /* SDWebImageSwiftUI */,
+				CF47A4B82D3F9CE600CF3EC5 /* SwiftyBeaver */,
 			);
 			productName = Ares;
 			productReference = CFF98B5A2D29732B00E98BB9 /* Ares.app */;
@@ -156,9 +251,6 @@
 			);
 			dependencies = (
 				CFF98B6F2D29732E00E98BB9 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				CFF98B702D29732E00E98BB9 /* AresTests */,
 			);
 			name = AresTests;
 			packageProductDependencies = (
@@ -179,9 +271,6 @@
 			);
 			dependencies = (
 				CFF98B792D29732E00E98BB9 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				CFF98B7A2D29732E00E98BB9 /* AresUITests */,
 			);
 			name = AresUITests;
 			packageProductDependencies = (
@@ -271,9 +360,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF47A4B02D3F9C9200CF3EC5 /* Entry.swift in Sources */,
+				CF47A4CD2D3FA17700CF3EC5 /* Feed.swift in Sources */,
 				CF47A4A12D3F857800CF3EC5 /* AresApp.swift in Sources */,
+				CF47A4C72D3F9E4000CF3EC5 /* AresEntry.swift in Sources */,
+				CF47A4D32D3FA30000CF3EC5 /* Folder.swift in Sources */,
 				CF47A4A22D3F857800CF3EC5 /* ContentView.swift in Sources */,
-				CF47A4A32D3F857800CF3EC5 /* Item.swift in Sources */,
+				CF47A4C32D3F9DD300CF3EC5 /* String+Ares.swift in Sources */,
+				CF47A4C92D3F9E5600CF3EC5 /* VideoEntry.swift in Sources */,
+				CF47A4CF2D3FA28F00CF3EC5 /* UnownedFeed.swift in Sources */,
+				CF47A4D72D3FC10500CF3EC5 /* AppIconType.swift in Sources */,
+				CF47A4D12D3FA2E600CF3EC5 /* AresFeed.swift in Sources */,
+				CF47A4CB2D3F9FDA00CF3EC5 /* UnownedEntry.swift in Sources */,
+				CF47A4D92D3FC17100CF3EC5 /* Color+Ares.swift in Sources */,
+				CF47A4D52D3FC0F600CF3EC5 /* ThemeType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF47A4BC2D3F9D0900CF3EC5 /* AresTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +389,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF47A4C02D3F9D0C00CF3EC5 /* AresUITests.swift in Sources */,
+				CF47A4C12D3F9D0C00CF3EC5 /* AresUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,6 +767,29 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CF47A4B22D3F9CE600CF3EC5 /* AresCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF47A4A62D3F948300CF3EC5 /* XCRemoteSwiftPackageReference "lib-ares-core" */;
+			productName = AresCore;
+		};
+		CF47A4B42D3F9CE600CF3EC5 /* OPML */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF47A4A82D3F969200CF3EC5 /* XCRemoteSwiftPackageReference "lib-swift-opml" */;
+			productName = OPML;
+		};
+		CF47A4B62D3F9CE600CF3EC5 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF47A4A92D3F96B100CF3EC5 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		CF47A4B82D3F9CE600CF3EC5 /* SwiftyBeaver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF47A4AA2D3F96CB00CF3EC5 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
+			productName = SwiftyBeaver;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CFF98B522D29732B00E98BB9 /* Project object */;
 }
