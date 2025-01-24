@@ -13,23 +13,23 @@ let log = SwiftyBeaver.self
 
 @main
 struct AresApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Entry.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
+    // Create the container at the app level
+    let container: ModelContainer
+    
+    init() {
         do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
+            let schema = Schema([Feed.self, Folder.self, Entry.self])
+            let configuration = ModelConfiguration(schema: schema)
+            container = try ModelContainer(for: schema, configurations: [configuration])
         } catch {
-            fatalError("Could not create ModelContainer: \(error)")
+            fatalError("Failed to create ModelContainer: \(error)")
         }
-    }()
-
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
-        .modelContainer(sharedModelContainer)
+        .modelContainer(container) // Inject the container into the environment
     }
 }
