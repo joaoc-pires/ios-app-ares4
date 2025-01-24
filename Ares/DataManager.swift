@@ -15,7 +15,6 @@ final class DataManager {
 
     // MARK: - CRUD for Feed
 
-    
     /**
      Inserts a Feed object if it does not already exist.
      - Parameters:
@@ -24,18 +23,19 @@ final class DataManager {
      - Throws: An error if saving to the context fails.
      */
     func insertFeed(_ feed: UnownedFeed, in context: ModelContext) async throws {
-        // 1. Check if a feed with the same URL already exists
+        // 1. Get the feed ID before creating the predicate
+        let feedId = feed.id
+        
+        // 2. Check if a feed with the same URL already exists
         let descriptor = FetchDescriptor<Feed>(predicate: #Predicate<Feed> { existingFeed in
-            existingFeed.id == feed.id
+            existingFeed.id == feedId
         })
         
         let existingFeeds = try context.fetch(descriptor)
         guard existingFeeds.isEmpty else { return }
         
-        // 2. Create and insert the new feed by converting UnownedFeed to Feed
+        // 3. Create and insert the new feed
         let newFeed = Feed(from: feed, and: feed.entries)
-        
-        // 3. Insert into SwiftData context and save
         context.insert(newFeed)
         try context.save()
     }
@@ -70,7 +70,6 @@ final class DataManager {
 
     // MARK: - CRUD for Folder
 
-    
     /**
      Inserts a Folder object if it does not already exist.
      - Parameters:
@@ -79,18 +78,19 @@ final class DataManager {
      - Throws: An error if saving to the context fails.
      */
     func insertFolder(_ folder: Folder, in context: ModelContext) async throws {
-        // 1. Check if a folder with the same name or unique identifier already exists
+        // 1. Get the folder name before creating the predicate
+        let folderName = folder.name
+        
+        // 2. Check if a folder with the same name already exists
         let descriptor = FetchDescriptor<Folder>(predicate: #Predicate<Folder> { existingFolder in
-            existingFolder.id == folder.id
+            existingFolder.name == folderName
         })
         
         let existingFolders = try context.fetch(descriptor)
         guard existingFolders.isEmpty else { return }
         
-        // 2. Insert the new folder
+        // 3. Insert the new folder
         context.insert(folder)
-        
-        // 3. Save the context to persist the changes
         try context.save()
     }
 
@@ -124,7 +124,6 @@ final class DataManager {
 
     // MARK: - CRUD for Entry
 
-    
     /**
      Inserts an Entry object if it does not already exist.
      - Parameters:
@@ -133,18 +132,19 @@ final class DataManager {
      - Throws: An error if saving to the context fails.
      */
     func insertEntry(_ entry: Entry, in context: ModelContext) async throws {
-        // 1. Check if an entry with the same unique identifier already exists
+        // 1. Get the entry ID before creating the predicate
+        let entryId = entry.id
+        
+        // 2. Check if an entry with the same ID already exists
         let descriptor = FetchDescriptor<Entry>(predicate: #Predicate<Entry> { existingEntry in
-            existingEntry.id == entry.id
+            existingEntry.id == entryId
         })
         
         let existingEntries = try context.fetch(descriptor)
         guard existingEntries.isEmpty else { return }
         
-        // 2. Insert the new entry into the context
+        // 3. Insert the new entry
         context.insert(entry)
-        
-        // 3. Save the context to persist the changes
         try context.save()
     }
 
