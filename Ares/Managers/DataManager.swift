@@ -7,11 +7,110 @@
 
 import Foundation
 import SwiftData
+import Observation
 
+@Observable
 final class DataManager {
+    // MARK: - Properties
     static let shared = DataManager()
+    private let container: ModelContainer
+    private let context: ModelContext
 
-    private init() {}
+    // Add property to track updates
+    private(set) var lastUpdate: Date = Date()
+
+    // MARK: - Initialization
+    private init() {
+        do {
+            let schema = Schema([Feed.self, Folder.self, Entry.self])
+            let configuration = ModelConfiguration(schema: schema)
+            container = try ModelContainer(for: schema, configurations: [configuration])
+            context = ModelContext(container)
+            context.autosaveEnabled = true
+            setupNotificationObservers()
+        } catch {
+            fatalError("Failed to create ModelContainer: \(error)")
+        }
+    }
+
+    // Mark context as updated
+    private func markAsUpdated() {
+        lastUpdate = Date()
+        context.processPendingChanges()
+    }
+
+    // MARK: - Setup
+    private func setupNotificationObservers() {
+        NotificationCenter.default.addObserver(
+            forName: NotificationName.didFinishRefreshingAllFeeds,
+            object: nil,
+            queue: nil,
+            using: handleRefreshAllFeeds
+        )
+        NotificationCenter.default.addObserver(
+            forName: NotificationName.didFinishRefreshingFeed,
+            object: nil,
+            queue: nil,
+            using: handleRefreshFeed
+        )
+    }
+
+    // MARK: - Notification Handlers
+    private func handleRefreshAllFeeds(_ notification: Notification) {
+        guard let unownedFeeds = notification.object as? [UnownedFeed] else { return }
+        
+        Task {
+            do {
+                var newFeeds: [UnownedFeed] = []
+                
+                for unownedFeed in unownedFeeds {
+                    let descriptor = FetchDescriptor<Feed>(predicate: #Predicate<Feed> { existingFeed in
+                        existingFeed.id == unownedFeed.id
+                    })
+                    
+                    let existingFeeds = try context.fetch(descriptor)
+                    if existingFeeds.isEmpty {
+                        try await insertFeed(unownedFeed, in: context)
+                        newFeeds.append(unownedFeed)
+                    }
+                }
+                
+                if !newFeeds.isEmpty {
+                    markAsUpdated()
+                    NotificationCenter.default.post(
+                        name: NotificationName.didInsertNewFeeds,
+                        object: newFeeds
+                    )
+                }
+            } catch {
+                print("Error handling refresh all feeds: \(error)")
+            }
+        }
+    }
+    
+    private func handleRefreshFeed(_ notification: Notification) {
+        guard let unownedFeed = notification.object as? UnownedFeed else { return }
+        
+        Task {
+            do {
+                let descriptor = FetchDescriptor<Feed>(predicate: #Predicate<Feed> { existingFeed in
+                    existingFeed.id == unownedFeed.id
+                })
+                
+                let existingFeeds = try context.fetch(descriptor)
+                if existingFeeds.isEmpty {
+                    try await insertFeed(unownedFeed, in: context)
+                    markAsUpdated()
+                    NotificationCenter.default.post(
+                        name: NotificationName.didInsertNewFeed,
+                        object: unownedFeed
+                    )
+                }
+            } catch {
+                print("Error handling refresh feed: \(error)")
+            }
+        }
+    }
 
     // MARK: - CRUD for Feed
 
@@ -38,6 +137,7 @@ final class DataManager {
         let newFeed = Feed(from: feed, and: feed.entries)
         context.insert(newFeed)
         try context.save()
+        markAsUpdated()
     }
 
     
@@ -66,6 +166,7 @@ final class DataManager {
         
         // 2. Save the context to persist the changes
         try context.save()
+        markAsUpdated()
     }
 
     // MARK: - CRUD for Folder
@@ -92,6 +193,7 @@ final class DataManager {
         // 3. Insert the new folder
         context.insert(folder)
         try context.save()
+        markAsUpdated()
     }
 
     
@@ -120,6 +222,7 @@ final class DataManager {
         
         // 2. Save the context to persist the changes
         try context.save()
+        markAsUpdated()
     }
 
     // MARK: - CRUD for Entry
@@ -146,6 +249,7 @@ final class DataManager {
         // 3. Insert the new entry
         context.insert(entry)
         try context.save()
+        markAsUpdated()
     }
 
     
@@ -174,5 +278,6 @@ final class DataManager {
         
         // 2. Save the context to persist the changes
         try context.save()
+        markAsUpdated()
     }
 }
