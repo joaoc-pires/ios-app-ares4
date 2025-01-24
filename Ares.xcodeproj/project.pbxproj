@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF26EADC2D43B45A00104D31 /* DataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26EADB2D43B41A00104D31 /* DataManagerTests.swift */; };
 		CF47A4A12D3F857800CF3EC5 /* AresApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A49C2D3F857800CF3EC5 /* AresApp.swift */; };
 		CF47A4A22D3F857800CF3EC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A49E2D3F857800CF3EC5 /* ContentView.swift */; };
 		CF47A4A42D3F857800CF3EC5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF47A4992D3F857800CF3EC5 /* Preview Assets.xcassets */; };
@@ -16,7 +17,6 @@
 		CF47A4B52D3F9CE600CF3EC5 /* OPML in Frameworks */ = {isa = PBXBuildFile; productRef = CF47A4B42D3F9CE600CF3EC5 /* OPML */; };
 		CF47A4B72D3F9CE600CF3EC5 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = CF47A4B62D3F9CE600CF3EC5 /* SDWebImageSwiftUI */; };
 		CF47A4B92D3F9CE600CF3EC5 /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = CF47A4B82D3F9CE600CF3EC5 /* SwiftyBeaver */; };
-		CF47A4BC2D3F9D0900CF3EC5 /* AresTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A4BA2D3F9D0900CF3EC5 /* AresTests.swift */; };
 		CF47A4C02D3F9D0C00CF3EC5 /* AresUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A4BD2D3F9D0C00CF3EC5 /* AresUITests.swift */; };
 		CF47A4C12D3F9D0C00CF3EC5 /* AresUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A4BE2D3F9D0C00CF3EC5 /* AresUITestsLaunchTests.swift */; };
 		CF47A4C32D3F9DD300CF3EC5 /* String+Ares.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A4C22D3F9DCC00CF3EC5 /* String+Ares.swift */; };
@@ -51,13 +51,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF26EADB2D43B41A00104D31 /* DataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerTests.swift; sourceTree = "<group>"; };
 		CF47A4992D3F857800CF3EC5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CF47A49B2D3F857800CF3EC5 /* Ares.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Ares.entitlements; sourceTree = "<group>"; };
 		CF47A49C2D3F857800CF3EC5 /* AresApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AresApp.swift; sourceTree = "<group>"; };
 		CF47A49D2D3F857800CF3EC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF47A49E2D3F857800CF3EC5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CF47A4AF2D3F9C8F00CF3EC5 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
-		CF47A4BA2D3F9D0900CF3EC5 /* AresTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AresTests.swift; sourceTree = "<group>"; };
 		CF47A4BD2D3F9D0C00CF3EC5 /* AresUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AresUITests.swift; sourceTree = "<group>"; };
 		CF47A4BE2D3F9D0C00CF3EC5 /* AresUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AresUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CF47A4C22D3F9DCC00CF3EC5 /* String+Ares.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ares.swift"; sourceTree = "<group>"; };
@@ -152,7 +152,7 @@
 		CF47A4BB2D3F9D0900CF3EC5 /* AresTests */ = {
 			isa = PBXGroup;
 			children = (
-				CF47A4BA2D3F9D0900CF3EC5 /* AresTests.swift */,
+				CF26EADB2D43B41A00104D31 /* DataManagerTests.swift */,
 			);
 			path = AresTests;
 			sourceTree = "<group>";
@@ -385,7 +385,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF47A4BC2D3F9D0900CF3EC5 /* AresTests.swift in Sources */,
+				CF26EADC2D43B45A00104D31 /* DataManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -743,7 +743,7 @@
 			repositoryURL = "https://github.com/joaoc-pires/lib-ares-core";
 			requirement = {
 				kind = exactVersion;
-				version = 1.2.0;
+				version = 1.2.1;
 			};
 		};
 		CF47A4A82D3F969200CF3EC5 /* XCRemoteSwiftPackageReference "lib-swift-opml" */ = {
