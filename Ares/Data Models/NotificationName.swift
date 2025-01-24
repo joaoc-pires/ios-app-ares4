@@ -13,4 +13,6 @@ enum NotificationName {
     static let didFinishRefreshingAllFeeds = Notification.Name("NetworkManager.didFinishRefreshingAllFeeds")
     static let didFinishRefreshingFeed = Notification.Name("NetworkManager.didFinishRefreshingFeed")
     static let didFailRefreshing = Notification.Name("NetworkManager.didFailRefreshing")
+    static let didInsertNewFeeds = Notification.Name("didInsertNewFeeds")
+    static let didInsertNewFeed = Notification.Name("didInsertNewFeed")
 }
