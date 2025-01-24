@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CF26EADC2D43B45A00104D31 /* DataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26EADB2D43B41A00104D31 /* DataManagerTests.swift */; };
+		CF26EADF2D43BE6700104D31 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26EADE2D43BE6300104D31 /* NetworkManager.swift */; };
+		CF26EAE12D43CE7600104D31 /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26EAE02D43CE7600104D31 /* NotificationName.swift */; };
 		CF47A4A12D3F857800CF3EC5 /* AresApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A49C2D3F857800CF3EC5 /* AresApp.swift */; };
 		CF47A4A22D3F857800CF3EC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A49E2D3F857800CF3EC5 /* ContentView.swift */; };
 		CF47A4A42D3F857800CF3EC5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF47A4992D3F857800CF3EC5 /* Preview Assets.xcassets */; };
@@ -52,6 +54,8 @@
 
 /* Begin PBXFileReference section */
 		CF26EADB2D43B41A00104D31 /* DataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerTests.swift; sourceTree = "<group>"; };
+		CF26EADE2D43BE6300104D31 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		CF26EAE02D43CE7600104D31 /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
 		CF47A4992D3F857800CF3EC5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CF47A49B2D3F857800CF3EC5 /* Ares.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Ares.entitlements; sourceTree = "<group>"; };
 		CF47A49C2D3F857800CF3EC5 /* AresApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AresApp.swift; sourceTree = "<group>"; };
@@ -106,6 +110,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF26EADD2D43BE5600104D31 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				CF26EADE2D43BE6300104D31 /* NetworkManager.swift */,
+				CF47A4DB2D3FC3E600CF3EC5 /* DataManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		CF47A49A2D3F857800CF3EC5 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,7 +130,7 @@
 		CF47A4A02D3F857800CF3EC5 /* Ares */ = {
 			isa = PBXGroup;
 			children = (
-				CF47A4DB2D3FC3E600CF3EC5 /* DataManager.swift */,
+				CF26EADD2D43BE5600104D31 /* Managers */,
 				CF47A49B2D3F857800CF3EC5 /* Ares.entitlements */,
 				CF47A49C2D3F857800CF3EC5 /* AresApp.swift */,
 				CF47A49E2D3F857800CF3EC5 /* ContentView.swift */,
@@ -132,6 +145,7 @@
 		CF47A4AD2D3F9C5400CF3EC5 /* Data Models */ = {
 			isa = PBXGroup;
 			children = (
+				CF26EAE02D43CE7600104D31 /* NotificationName.swift */,
 				CF47A4D62D3FC10500CF3EC5 /* AppIconType.swift */,
 				CF47A4D42D3FC0F600CF3EC5 /* ThemeType.swift */,
 				CF47A4CE2D3FA28900CF3EC5 /* UnownedFeed.swift */,
@@ -365,8 +379,10 @@
 			files = (
 				CF47A4B02D3F9C9200CF3EC5 /* Entry.swift in Sources */,
 				CF47A4DC2D3FC3E600CF3EC5 /* DataManager.swift in Sources */,
+				CF26EAE12D43CE7600104D31 /* NotificationName.swift in Sources */,
 				CF47A4CD2D3FA17700CF3EC5 /* Feed.swift in Sources */,
 				CF47A4A12D3F857800CF3EC5 /* AresApp.swift in Sources */,
+				CF26EADF2D43BE6700104D31 /* NetworkManager.swift in Sources */,
 				CF47A4C72D3F9E4000CF3EC5 /* AresEntry.swift in Sources */,
 				CF47A4D32D3FA30000CF3EC5 /* Folder.swift in Sources */,
 				CF47A4A22D3F857800CF3EC5 /* ContentView.swift in Sources */,
