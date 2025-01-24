@@ -7,6 +7,9 @@
 
 import SwiftUI
 import SwiftData
+import SwiftyBeaver
+
+let log = SwiftyBeaver.self
 
 @main
 struct AresApp: App {
