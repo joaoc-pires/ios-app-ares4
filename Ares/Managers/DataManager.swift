@@ -64,8 +64,9 @@ final class DataManager {
                 var newFeeds: [UnownedFeed] = []
                 
                 for unownedFeed in unownedFeeds {
+                    let feedId = unownedFeed.id
                     let descriptor = FetchDescriptor<Feed>(predicate: #Predicate<Feed> { existingFeed in
-                        existingFeed.id == unownedFeed.id
+                        existingFeed.id == feedId
                     })
                     
                     let existingFeeds = try context.fetch(descriptor)
@@ -93,8 +94,9 @@ final class DataManager {
         
         Task {
             do {
+                let feedId = unownedFeed.id
                 let descriptor = FetchDescriptor<Feed>(predicate: #Predicate<Feed> { existingFeed in
-                    existingFeed.id == unownedFeed.id
+                    existingFeed.id == feedId
                 })
                 
                 let existingFeeds = try context.fetch(descriptor)
