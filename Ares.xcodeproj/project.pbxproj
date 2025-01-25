@@ -33,6 +33,7 @@
 		CF47A4D72D3FC10500CF3EC5 /* AppIconType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A4D62D3FC10500CF3EC5 /* AppIconType.swift */; };
 		CF47A4D92D3FC17100CF3EC5 /* Color+Ares.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A4D82D3FC16D00CF3EC5 /* Color+Ares.swift */; };
 		CF47A4DC2D3FC3E600CF3EC5 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A4DB2D3FC3E600CF3EC5 /* DataManager.swift */; };
+		CF59417F2D44B9C500B63B57 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59417E2D44B9C500B63B57 /* NetworkManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		CF47A4D62D3FC10500CF3EC5 /* AppIconType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconType.swift; sourceTree = "<group>"; };
 		CF47A4D82D3FC16D00CF3EC5 /* Color+Ares.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ares.swift"; sourceTree = "<group>"; };
 		CF47A4DB2D3FC3E600CF3EC5 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		CF59417E2D44B9C500B63B57 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		CFF98B5A2D29732B00E98BB9 /* Ares.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ares.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF98B6D2D29732E00E98BB9 /* AresTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AresTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF98B772D29732E00E98BB9 /* AresUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AresUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,7 +168,7 @@
 		CF47A4BB2D3F9D0900CF3EC5 /* AresTests */ = {
 			isa = PBXGroup;
 			children = (
-				CF26EADB2D43B41A00104D31 /* DataManagerTests.swift */,
+				CF59417D2D44B98000B63B57 /* Managers */,
 			);
 			path = AresTests;
 			sourceTree = "<group>";
@@ -207,6 +209,15 @@
 				CF47A4C22D3F9DCC00CF3EC5 /* String+Ares.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CF59417D2D44B98000B63B57 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				CF59417E2D44B9C500B63B57 /* NetworkManagerTests.swift */,
+				CF26EADB2D43B41A00104D31 /* DataManagerTests.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		CFF98B512D29732B00E98BB9 = {
@@ -401,6 +412,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF59417F2D44B9C500B63B57 /* NetworkManagerTests.swift in Sources */,
 				CF26EADC2D43B45A00104D31 /* DataManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
