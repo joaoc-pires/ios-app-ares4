@@ -771,7 +771,7 @@
 			repositoryURL = "https://github.com/joaoc-pires/lib-ares-core";
 			requirement = {
 				kind = exactVersion;
-				version = 1.2.1;
+				version = 1.2.2;
 			};
 		};
 		CF47A4A82D3F969200CF3EC5 /* XCRemoteSwiftPackageReference "lib-swift-opml" */ = {

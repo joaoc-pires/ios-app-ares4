@@ -14,10 +14,11 @@ class NetworkManager {
     static let shared = NetworkManager()
     
     // MARK: - Properties
-    private let parser = AresCore()
+    private let parser: AresCore
 
     // MARK: - Initialization
-    private init() {
+    init(parser: AresCore = AresCore()) {
+        self.parser = parser
         setupNotificationObservers()
     }
     
@@ -28,12 +29,12 @@ class NetworkManager {
     }
     
     // MARK: - Notification Handlers
-    private func handleRefreshAllFeeds(notification: Notification) {
+    func handleRefreshAllFeeds(notification: Notification) {
         guard let feeds = notification.object as? [String] else { return }
         refreshAllFeeds(feeds)
     }
     
-    private func handleRefreshFeed(_ notification: Notification) {
+    func handleRefreshFeed(_ notification: Notification) {
         guard let feed = notification.object as? String else { return }
         refreshFeed(feed)
     }

@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/joaoc-pires/lib-ares-core",
       "state" : {
-        "revision" : "8f58df7c701d8e2fd3ae5aa6c40628d7b6631667",
-        "version" : "1.2.1"
+        "revision" : "dcbfb9726afbec8a69dfca03673d6b8bd8a6e509",
+        "version" : "1.2.2"
       }
     },
     {
