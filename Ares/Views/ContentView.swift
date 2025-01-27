@@ -15,9 +15,14 @@ struct ContentView: View {
     // Access DataManager for operations
     let dataManager = DataManager.shared
     
+    @State var openSettings = false
+    
     var body: some View {
-        List(feeds) { feed in
-            Text(feed.title ?? String())
+        Button(action: { openSettings = true }) {
+            Text("Open Settings")
+        }
+        .sheet(isPresented: $openSettings) {
+            SettingsView()
         }
     }
 }

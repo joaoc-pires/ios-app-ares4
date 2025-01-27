@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF167B252D46127900437191 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF167B242D46127900437191 /* SettingsView.swift */; };
+		CF167B272D4612E200437191 /* OPMLFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF167B262D4612E200437191 /* OPMLFile.swift */; };
+		CF167B292D46130600437191 /* UTType+Ares.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF167B282D4612FF00437191 /* UTType+Ares.swift */; };
+		CF167B2B2D46151300437191 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF167B2A2D46151300437191 /* MailView.swift */; };
+		CF167B2D2D46154200437191 /* URL+Ares.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF167B2C2D46154200437191 /* URL+Ares.swift */; };
+		CF167B2F2D46169500437191 /* Bundle+Ares.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF167B2E2D46169500437191 /* Bundle+Ares.swift */; };
+		CF167B312D461B1500437191 /* View+Ares.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF167B302D461B1500437191 /* View+Ares.swift */; };
 		CF26EADC2D43B45A00104D31 /* DataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26EADB2D43B41A00104D31 /* DataManagerTests.swift */; };
 		CF26EADF2D43BE6700104D31 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26EADE2D43BE6300104D31 /* NetworkManager.swift */; };
 		CF26EAE12D43CE7600104D31 /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26EAE02D43CE7600104D31 /* NotificationName.swift */; };
@@ -34,6 +41,7 @@
 		CF47A4D92D3FC17100CF3EC5 /* Color+Ares.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A4D82D3FC16D00CF3EC5 /* Color+Ares.swift */; };
 		CF47A4DC2D3FC3E600CF3EC5 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A4DB2D3FC3E600CF3EC5 /* DataManager.swift */; };
 		CF59417F2D44B9C500B63B57 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59417E2D44B9C500B63B57 /* NetworkManagerTests.swift */; };
+		CFAEB4D22D44C9FB005755C7 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAEB4D12D44C9F2005755C7 /* NotificationsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +62,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF167B242D46127900437191 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		CF167B262D4612E200437191 /* OPMLFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPMLFile.swift; sourceTree = "<group>"; };
+		CF167B282D4612FF00437191 /* UTType+Ares.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UTType+Ares.swift"; sourceTree = "<group>"; };
+		CF167B2A2D46151300437191 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
+		CF167B2C2D46154200437191 /* URL+Ares.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Ares.swift"; sourceTree = "<group>"; };
+		CF167B2E2D46169500437191 /* Bundle+Ares.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Ares.swift"; sourceTree = "<group>"; };
+		CF167B302D461B1500437191 /* View+Ares.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ares.swift"; sourceTree = "<group>"; };
 		CF26EADB2D43B41A00104D31 /* DataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerTests.swift; sourceTree = "<group>"; };
 		CF26EADE2D43BE6300104D31 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CF26EAE02D43CE7600104D31 /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
@@ -78,6 +93,7 @@
 		CF47A4D82D3FC16D00CF3EC5 /* Color+Ares.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ares.swift"; sourceTree = "<group>"; };
 		CF47A4DB2D3FC3E600CF3EC5 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		CF59417E2D44B9C500B63B57 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
+		CFAEB4D12D44C9F2005755C7 /* NotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
 		CFF98B5A2D29732B00E98BB9 /* Ares.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ares.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF98B6D2D29732E00E98BB9 /* AresTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AresTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF98B772D29732E00E98BB9 /* AresUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AresUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,9 +128,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF167B232D46126500437191 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CF167B2A2D46151300437191 /* MailView.swift */,
+				CF47A49E2D3F857800CF3EC5 /* ContentView.swift */,
+				CF167B242D46127900437191 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		CF26EADD2D43BE5600104D31 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				CFAEB4D12D44C9F2005755C7 /* NotificationsManager.swift */,
 				CF26EADE2D43BE6300104D31 /* NetworkManager.swift */,
 				CF47A4DB2D3FC3E600CF3EC5 /* DataManager.swift */,
 			);
@@ -135,7 +162,7 @@
 				CF26EADD2D43BE5600104D31 /* Managers */,
 				CF47A49B2D3F857800CF3EC5 /* Ares.entitlements */,
 				CF47A49C2D3F857800CF3EC5 /* AresApp.swift */,
-				CF47A49E2D3F857800CF3EC5 /* ContentView.swift */,
+				CF167B232D46126500437191 /* Views */,
 				CF47A49D2D3F857800CF3EC5 /* Assets.xcassets */,
 				CF47A4AD2D3F9C5400CF3EC5 /* Data Models */,
 				CF47A4DA2D3FC17A00CF3EC5 /* Extensions */,
@@ -147,6 +174,7 @@
 		CF47A4AD2D3F9C5400CF3EC5 /* Data Models */ = {
 			isa = PBXGroup;
 			children = (
+				CF167B262D4612E200437191 /* OPMLFile.swift */,
 				CF26EAE02D43CE7600104D31 /* NotificationName.swift */,
 				CF47A4D62D3FC10500CF3EC5 /* AppIconType.swift */,
 				CF47A4D42D3FC0F600CF3EC5 /* ThemeType.swift */,
@@ -205,8 +233,12 @@
 		CF47A4DA2D3FC17A00CF3EC5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				CF167B282D4612FF00437191 /* UTType+Ares.swift */,
 				CF47A4D82D3FC16D00CF3EC5 /* Color+Ares.swift */,
 				CF47A4C22D3F9DCC00CF3EC5 /* String+Ares.swift */,
+				CF167B2C2D46154200437191 /* URL+Ares.swift */,
+				CF167B2E2D46169500437191 /* Bundle+Ares.swift */,
+				CF167B302D461B1500437191 /* View+Ares.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -389,22 +421,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF47A4B02D3F9C9200CF3EC5 /* Entry.swift in Sources */,
+				CF167B272D4612E200437191 /* OPMLFile.swift in Sources */,
 				CF47A4DC2D3FC3E600CF3EC5 /* DataManager.swift in Sources */,
 				CF26EAE12D43CE7600104D31 /* NotificationName.swift in Sources */,
+				CF167B292D46130600437191 /* UTType+Ares.swift in Sources */,
 				CF47A4CD2D3FA17700CF3EC5 /* Feed.swift in Sources */,
+				CF167B2D2D46154200437191 /* URL+Ares.swift in Sources */,
 				CF47A4A12D3F857800CF3EC5 /* AresApp.swift in Sources */,
 				CF26EADF2D43BE6700104D31 /* NetworkManager.swift in Sources */,
 				CF47A4C72D3F9E4000CF3EC5 /* AresEntry.swift in Sources */,
 				CF47A4D32D3FA30000CF3EC5 /* Folder.swift in Sources */,
 				CF47A4A22D3F857800CF3EC5 /* ContentView.swift in Sources */,
+				CF167B2F2D46169500437191 /* Bundle+Ares.swift in Sources */,
 				CF47A4C32D3F9DD300CF3EC5 /* String+Ares.swift in Sources */,
 				CF47A4C92D3F9E5600CF3EC5 /* VideoEntry.swift in Sources */,
+				CF167B312D461B1500437191 /* View+Ares.swift in Sources */,
 				CF47A4CF2D3FA28F00CF3EC5 /* UnownedFeed.swift in Sources */,
 				CF47A4D72D3FC10500CF3EC5 /* AppIconType.swift in Sources */,
+				CF167B2B2D46151300437191 /* MailView.swift in Sources */,
 				CF47A4D12D3FA2E600CF3EC5 /* AresFeed.swift in Sources */,
+				CFAEB4D22D44C9FB005755C7 /* NotificationsManager.swift in Sources */,
 				CF47A4CB2D3F9FDA00CF3EC5 /* UnownedEntry.swift in Sources */,
 				CF47A4D92D3FC17100CF3EC5 /* Color+Ares.swift in Sources */,
 				CF47A4D52D3FC0F600CF3EC5 /* ThemeType.swift in Sources */,
+				CF167B252D46127900437191 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
