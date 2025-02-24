@@ -14,6 +14,8 @@ import QuickLook
 struct SettingsView: View {
     @Environment(\.openURL)             private var openURL
     
+    @EnvironmentObject                  var navigationManager: NavigationManager
+    
     // AppSettings
     @AppStorage("openLinksInApp")       var openLinksInApp = true
     @AppStorage("openLinksInReader")    var openLinksInReader = true
@@ -34,57 +36,57 @@ struct SettingsView: View {
     @State private var showDeleteCacheWarning = false
     
     var body: some View {
-        List {
-            Section {
-                Button(action: didTapThemes) {
-                    HStack {
-                        Text("Themes".localized)
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                            .foregroundColor(Color(uiColor: .secondaryLabel))
+        NavigationStack(path: $navigationManager.settingsStack) {
+            List {
+                Section {
+                    Button(action: { navigationManager.settingsStack.append(.themes) }) {
+                        HStack {
+                            Text("Themes".localized)
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                                .foregroundColor(Color(uiColor: .secondaryLabel))
+                        }
+                        .contentShape(Rectangle())
                     }
-                    .contentShape(Rectangle())
-                }
-                .buttonStyle(.plain)
-                Button(action: didTapFilters) {
-                    HStack {
-                        Text("Filters".localized)
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                            .foregroundColor(Color(uiColor: .secondaryLabel))
+                    .buttonStyle(.plain)
+                    Button(action: { navigationManager.settingsStack.append(.filters) }) {
+                        HStack {
+                            Text("Filters".localized)
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                                .foregroundColor(Color(uiColor: .secondaryLabel))
+                        }
+                        .contentShape(Rectangle())
                     }
-                    .contentShape(Rectangle())
-                }
-                .buttonStyle(.plain)
-                Toggle(isOn: $openLinksInApp) {
-                    Text("Open links in app".localized)
-                }
-                .toggleStyle(SwitchToggleStyle(tint: ThemeType(rawValue: themeColor)!.color))
-                Toggle(isOn: $openLinksInReader) {
-                    Text("Open links in 'Reader Mode'".localized)
-                }
-                .toggleStyle(SwitchToggleStyle(tint: ThemeType(rawValue: themeColor)!.color))
-                .disabled(!openLinksInApp)
-                .opacity(!openLinksInApp ? 0.5 : 1)
-            } header: {
-                Text("General".localized)
-            }
-            Section {
-                Toggle(isOn: $hideUnreadMarker) {
-                    Text("Hide unread markers".localized)
-                }
-                .toggleStyle(SwitchToggleStyle(tint: ThemeType(rawValue: themeColor)!.color))
-                Button(action: { /*navigationStack.append(.notifications)*/ }) {
-                    HStack {
-                        Text("Notifications".localized)
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                            .foregroundColor(Color(uiColor: .secondaryLabel))
+                    .buttonStyle(.plain)
+                    Toggle(isOn: $openLinksInApp) {
+                        Text("Open links in app".localized)
                     }
-                    .contentShape(Rectangle())
+                    .toggleStyle(SwitchToggleStyle(tint: ThemeType(rawValue: themeColor)!.color))
+                    Toggle(isOn: $openLinksInReader) {
+                        Text("Open links in 'Reader Mode'".localized)
+                    }
+                    .toggleStyle(SwitchToggleStyle(tint: ThemeType(rawValue: themeColor)!.color))
+                    .disabled(!openLinksInApp)
+                    .opacity(!openLinksInApp ? 0.5 : 1)
+                } header: {
+                    Text("General".localized)
                 }
-                .buttonStyle(.plain)
-                if opmlFile != nil {
+                Section {
+                    Toggle(isOn: $hideUnreadMarker) {
+                        Text("Hide unread markers".localized)
+                    }
+                    .toggleStyle(SwitchToggleStyle(tint: ThemeType(rawValue: themeColor)!.color))
+                    Button(action: { navigationManager.settingsStack.append(.notifications) }) {
+                        HStack {
+                            Text("Notifications".localized)
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                                .foregroundColor(Color(uiColor: .secondaryLabel))
+                        }
+                        .contentShape(Rectangle())
+                    }
+                    .buttonStyle(.plain)
                     Button(action: exportOPML) {
                         HStack {
                             Text("Export OPML".localized)
@@ -99,98 +101,98 @@ struct SettingsView: View {
                     }
                     .buttonStyle(.plain)
                     .disabled(loadingOPML || loadingOPMLError)
-                }
-                Button(action: deleteCacheWarning) {
-                    HStack {
-                        Text("Delete Cache".localized)
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                            .foregroundColor(Color(uiColor: .secondaryLabel))
-                    }
-                    .contentShape(Rectangle())
-                }
-                .buttonStyle(.plain)
-            } header: {
-                Text("Feeds".localized)
-            }
-            Section {
-                Button(action: didTapSendFeedback) {
-                    HStack {
-                        Text("Send feedback".localized)
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                            .foregroundColor(Color(uiColor: .secondaryLabel))
-                    }
-                    .contentShape(Rectangle())
-                }
-                .buttonStyle(.plain)
-                Button(action: didTapPrivacy) {
-                    HStack {
-                        Text("Privacy Policy".localized)
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                            .foregroundColor(Color(uiColor: .secondaryLabel))
-                    }
-                    .contentShape(Rectangle())
-                }
-                .buttonStyle(.plain)
-                Button(action: didTapTerms) {
-                    HStack {
-                        Text("Terms of Use".localized)
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                            .foregroundColor(Color(uiColor: .secondaryLabel))
-                    }
-                    .contentShape(Rectangle())
-                }
-                .buttonStyle(.plain)
-                Button(action: didTapLibraries) {
-                    HStack {
-                        Text("Open Source Libraries".localized)
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                            .foregroundColor(Color(uiColor: .secondaryLabel))
-                    }
-                    .contentShape(Rectangle())
-                }
-                .buttonStyle(.plain)
-                Button(action: { previewLogs() }) {
-                    HStack {
-                        Text("Logs".localized)
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                            .foregroundColor(Color(uiColor: .secondaryLabel))
-                    }
-                    .contentShape(Rectangle())
-                }
-                .buttonStyle(.plain)
-                .quickLookPreview($logFileURL)
-            } header: {
-                Text("About".localized)
-            } footer: {
-                VStack(alignment: .center) {
-                    HStack {
-                        Spacer()
-                        VStack(alignment: .center, spacing: 0) {
-                            Text("Ares - RSS Reader")
-                                .font(.caption)
+                    Button(action: deleteCacheWarning) {
+                        HStack {
+                            Text("Delete Cache".localized)
+                            Spacer()
+                            Image(systemName: "chevron.right")
                                 .foregroundColor(Color(uiColor: .secondaryLabel))
-                            Text("João Pires")
-                                .font(.caption)
-                                .foregroundColor(Color(uiColor: .secondaryLabel))
-                            Text("\(Bundle.main.releaseVersion)-\(Bundle.main.buildVersion)")
-                                .font(.caption2)
-                                .foregroundColor(Color(uiColor: .tertiaryLabel))
                         }
-                        Spacer()
+                        .contentShape(Rectangle())
                     }
-                    .padding(.top)
+                    .buttonStyle(.plain)
+                } header: {
+                    Text("Feeds".localized)
+                }
+                Section {
+                    Button(action: didTapSendFeedback) {
+                        HStack {
+                            Text("Send feedback".localized)
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                                .foregroundColor(Color(uiColor: .secondaryLabel))
+                        }
+                        .contentShape(Rectangle())
+                    }
+                    .buttonStyle(.plain)
+                    Button(action: didTapPrivacy) {
+                        HStack {
+                            Text("Privacy Policy".localized)
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                                .foregroundColor(Color(uiColor: .secondaryLabel))
+                        }
+                        .contentShape(Rectangle())
+                    }
+                    .buttonStyle(.plain)
+                    Button(action: didTapTerms) {
+                        HStack {
+                            Text("Terms of Use".localized)
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                                .foregroundColor(Color(uiColor: .secondaryLabel))
+                        }
+                        .contentShape(Rectangle())
+                    }
+                    .buttonStyle(.plain)
+                    Button(action: { navigationManager.settingsStack.append(.libraries) }) {
+                        HStack {
+                            Text("Open Source Libraries".localized)
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                                .foregroundColor(Color(uiColor: .secondaryLabel))
+                        }
+                        .contentShape(Rectangle())
+                    }
+                    .buttonStyle(.plain)
+                    Button(action: { navigationManager.settingsStack.append(.logs) }) {
+                        HStack {
+                            Text("Logs".localized)
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                                .foregroundColor(Color(uiColor: .secondaryLabel))
+                        }
+                        .contentShape(Rectangle())
+                    }
+                    .buttonStyle(.plain)
+                    .quickLookPreview($logFileURL)
+                } header: {
+                    Text("About".localized)
+                } footer: {
+                    VStack(alignment: .center) {
+                        HStack {
+                            Spacer()
+                            VStack(alignment: .center, spacing: 0) {
+                                Text("Ares - RSS Reader")
+                                    .font(.caption)
+                                    .foregroundColor(Color(uiColor: .secondaryLabel))
+                                Text("João Pires")
+                                    .font(.caption)
+                                    .foregroundColor(Color(uiColor: .secondaryLabel))
+                                Text("\(Bundle.main.releaseVersion)-\(Bundle.main.buildVersion)")
+                                    .font(.caption2)
+                                    .foregroundColor(Color(uiColor: .tertiaryLabel))
+                            }
+                            Spacer()
+                        }
+                        .padding(.top)
+                    }
                 }
             }
-        }
-        .navigationTitle("Settings")
-        .navigationBarTitleDisplayMode(.inline)
-        .onAppear(perform: prepareOPML)
+            .navigationTitle("Settings")
+            .navigationBarTitleDisplayMode(.inline)
+            .onAppear(perform: prepareOPML)
+           
         .alert(isPresented: $showMailError) {
             Alert(title: Text("Error!"), message: Text("Couldn't send email"))
         }
@@ -204,16 +206,17 @@ struct SettingsView: View {
         }, message: {
             Text("Are you sure you want to continue?\nThis will delete all unsaved entries, but keep the feeds.")
         })
-        //            .navigationDestination(for: SettingsNavigationType.self) { destination in
-        //                switch destination {
-        //                    case .themes: ThemesView()
-        //                    case .libraryList: LibraryListView()
-        //                    case .notifications: NotificationsView()
-        //                    case .library(let library): LibraryView(library: library)
-        //                    case .logs: LogView()
-        //                    default: EmptyView()
-        //                }
-        //            }
+        .navigationDestination(for: AresNavigationStack.self) { destination in
+            switch destination {
+                case .themes: Text("themes")
+                case .filters: Text("filters")
+                case .notifications: Text("notifications")
+                case .logs: Text("logs")
+                case .libraries: Text("libraries")
+                case .library: Text("library")
+                default: EmptyView()
+            }
+        }
         .sheet(isPresented: $showMailView) {
             MailView(result: self.$mailResult)
         }
@@ -225,19 +228,12 @@ struct SettingsView: View {
                     print(error.localizedDescription)
             }
         }
-    }
-    
-    private func didTapThemes() {
-        //navigationStack.append(.themes)
-    }
-    
-    private func didTapFilters() {
-        //navigationStack.append(.filters)
+        }
     }
     
     private func prepareOPML() {
-        //        loadingOPML = true
-        //        loadingOPMLError = false
+                loadingOPML = true
+                loadingOPMLError = false
         //        Task {
         //            do {
         //                let xmlString = try await dataManager.createOPML()
@@ -287,11 +283,7 @@ struct SettingsView: View {
         //        dataManager.deleteCache()
         //        NotificationCenter.default.post(name: .globalDismissViews, object: nil)
     }
-    
-    private func didTapLibraries() {
-        //        navigationStack.append(.libraryList)
-    }
-    
+        
     private func openURL(url: URL) {
         //        if settingsManager.openLinksInApp {
         //            let config = SFSafariViewController.Configuration()
@@ -304,9 +296,4 @@ struct SettingsView: View {
         //            openURL(url)
         //        }
     }
-    
-    private func previewLogs() {
-        logFileURL = URL.logFile
-    }
-    
 }

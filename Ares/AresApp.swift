@@ -13,6 +13,8 @@ let log = SwiftyBeaver.self
 
 @main
 struct AresApp: App {
+    @StateObject var navigationManager = NavigationManager()
+    
     // Create the container at the app level
     let container: ModelContainer
     
@@ -30,6 +32,7 @@ struct AresApp: App {
         WindowGroup {
             ContentView()
         }
+        .environment(navigationManager)
         .modelContainer(container) // Inject the container into the environment
     }
 }

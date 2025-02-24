@@ -9,19 +9,19 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
+    @EnvironmentObject var navigationManager: NavigationManager
+    
     // Use @Query to access your data
     @Query private var feeds: [Feed]
     
     // Access DataManager for operations
     let dataManager = DataManager.shared
-    
-    @State var openSettings = false
-    
+        
     var body: some View {
-        Button(action: { openSettings = true }) {
+        Button(action: { navigationManager.showSettings = true }) {
             Text("Open Settings")
         }
-        .sheet(isPresented: $openSettings) {
+        .sheet(isPresented: $navigationManager.showSettings) {
             SettingsView()
         }
     }

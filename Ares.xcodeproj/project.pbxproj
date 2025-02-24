@@ -42,6 +42,8 @@
 		CF47A4DC2D3FC3E600CF3EC5 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF47A4DB2D3FC3E600CF3EC5 /* DataManager.swift */; };
 		CF59417F2D44B9C500B63B57 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59417E2D44B9C500B63B57 /* NetworkManagerTests.swift */; };
 		CFAEB4D22D44C9FB005755C7 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAEB4D12D44C9F2005755C7 /* NotificationsManager.swift */; };
+		CFBB77192D6C8BFF0055003A /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBB77182D6C8BFF0055003A /* NavigationManager.swift */; };
+		CFBB771B2D6C8DA70055003A /* AresNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBB771A2D6C8DA70055003A /* AresNavigationStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +96,9 @@
 		CF47A4DB2D3FC3E600CF3EC5 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		CF59417E2D44B9C500B63B57 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		CFAEB4D12D44C9F2005755C7 /* NotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
+		CFBB77172D6C8AE20055003A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CFBB77182D6C8BFF0055003A /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
+		CFBB771A2D6C8DA70055003A /* AresNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AresNavigationStack.swift; sourceTree = "<group>"; };
 		CFF98B5A2D29732B00E98BB9 /* Ares.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ares.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF98B6D2D29732E00E98BB9 /* AresTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AresTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF98B772D29732E00E98BB9 /* AresUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AresUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +149,7 @@
 				CFAEB4D12D44C9F2005755C7 /* NotificationsManager.swift */,
 				CF26EADE2D43BE6300104D31 /* NetworkManager.swift */,
 				CF47A4DB2D3FC3E600CF3EC5 /* DataManager.swift */,
+				CFBB77182D6C8BFF0055003A /* NavigationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -159,14 +165,15 @@
 		CF47A4A02D3F857800CF3EC5 /* Ares */ = {
 			isa = PBXGroup;
 			children = (
-				CF26EADD2D43BE5600104D31 /* Managers */,
 				CF47A49B2D3F857800CF3EC5 /* Ares.entitlements */,
+				CFBB77172D6C8AE20055003A /* Info.plist */,
 				CF47A49C2D3F857800CF3EC5 /* AresApp.swift */,
-				CF167B232D46126500437191 /* Views */,
 				CF47A49D2D3F857800CF3EC5 /* Assets.xcassets */,
 				CF47A4AD2D3F9C5400CF3EC5 /* Data Models */,
 				CF47A4DA2D3FC17A00CF3EC5 /* Extensions */,
+				CF26EADD2D43BE5600104D31 /* Managers */,
 				CF47A49A2D3F857800CF3EC5 /* Preview Content */,
+				CF167B232D46126500437191 /* Views */,
 			);
 			path = Ares;
 			sourceTree = "<group>";
@@ -174,6 +181,7 @@
 		CF47A4AD2D3F9C5400CF3EC5 /* Data Models */ = {
 			isa = PBXGroup;
 			children = (
+				CFBB771A2D6C8DA70055003A /* AresNavigationStack.swift */,
 				CF167B262D4612E200437191 /* OPMLFile.swift */,
 				CF26EAE02D43CE7600104D31 /* NotificationName.swift */,
 				CF47A4D62D3FC10500CF3EC5 /* AppIconType.swift */,
@@ -431,6 +439,7 @@
 				CF26EADF2D43BE6700104D31 /* NetworkManager.swift in Sources */,
 				CF47A4C72D3F9E4000CF3EC5 /* AresEntry.swift in Sources */,
 				CF47A4D32D3FA30000CF3EC5 /* Folder.swift in Sources */,
+				CFBB77192D6C8BFF0055003A /* NavigationManager.swift in Sources */,
 				CF47A4A22D3F857800CF3EC5 /* ContentView.swift in Sources */,
 				CF167B2F2D46169500437191 /* Bundle+Ares.swift in Sources */,
 				CF47A4C32D3F9DD300CF3EC5 /* String+Ares.swift in Sources */,
@@ -444,6 +453,7 @@
 				CF47A4CB2D3F9FDA00CF3EC5 /* UnownedEntry.swift in Sources */,
 				CF47A4D92D3FC17100CF3EC5 /* Color+Ares.swift in Sources */,
 				CF47A4D52D3FC0F600CF3EC5 /* ThemeType.swift in Sources */,
+				CFBB771B2D6C8DA70055003A /* AresNavigationStack.swift in Sources */,
 				CF167B252D46127900437191 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -609,6 +619,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Ares/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -648,6 +659,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Ares/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
