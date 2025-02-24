@@ -84,22 +84,22 @@ struct SettingsView: View {
                     .contentShape(Rectangle())
                 }
                 .buttonStyle(.plain)
-                //                    if opmlFile != nil {
-                //                        Button(action: exportOPML) {
-                //                            HStack {
-                //                                Text("Export OPML".localized)
-                //                                Spacer()
-                //                                ProgressView()
-                //                                    .foregroundStyle(ThemeType(rawValue: themeColor)!.color)
-                //                                    .opacity(loadingOPML ? 1 : 0)
-                //                                Image(systemName: "chevron.right")
-                //                                    .foregroundColor(Color(uiColor: .secondaryLabel))
-                //                            }
-                //                            .contentShape(Rectangle())
-                //                        }
-                //                        .buttonStyle(.plain)
-                //                        .disabled(loadingOPML || loadingOPMLError)
-                //                    }
+                if opmlFile != nil {
+                    Button(action: exportOPML) {
+                        HStack {
+                            Text("Export OPML".localized)
+                            Spacer()
+                            ProgressView()
+                                .foregroundStyle(ThemeType(rawValue: themeColor)!.color)
+                                .opacity(loadingOPML ? 1 : 0)
+                            Image(systemName: "chevron.right")
+                                .foregroundColor(Color(uiColor: .secondaryLabel))
+                        }
+                        .contentShape(Rectangle())
+                    }
+                    .buttonStyle(.plain)
+                    .disabled(loadingOPML || loadingOPMLError)
+                }
                 Button(action: deleteCacheWarning) {
                     HStack {
                         Text("Delete Cache".localized)
